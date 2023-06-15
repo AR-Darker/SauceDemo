@@ -1,3 +1,37 @@
 вооо а тут могу писать что хочу, это же не код, не комментарии
 *Вопрос: а можно ли в проектах такой файлик делать, типо заметки?)
 *Вопрос: гугл notworking
+///////////////////////////////////////////////
+https://www.saucedemo.com
+///////////////////////////////////////////////
+driver.findElement(By.id("login-button"))
+driver.findElement(By.name("login-button"))
+driver.findElement(By.classname("title"))/////*
+driver.findElement(By.tagname("grammarly-desktop-integration"))/////*
+driver.findElement(By.linktext("company/sauce-labs"))
+driver.findElement(By.partiallinktext("company/sauce"))
+xpath
+1Поиск по атрибуту, например By.xpath("//tag[@attribute='value']");
+2Поиск по тексту, например By.xpath("//tag[text()='text']");
+3Поиск по частичному совпадению атрибута, например By.xpath("//tag[contains(@attribute,'text')]");
+4Поиск по частичному совпадению текста, например By.xpath("//tag[contains(text(),'text')]");
+5ancestor, например //*[text()='Enterprise Testing']//ancestor::div
+6descendant
+7following
+8parent
+9preceding
+Подсказка:  XPath Axes
+*поиск элемента с условием AND, например //input[@class='_2zrpKA _1dBPDZ' and @type='text']
+css
+1.class
+2.class1.class2
+3.class1 .class2
+4#id
+5tagname
+6tagname.class
+7[attribute=value]
+8[attribute~=value]
+9[attribute|=value]
+0[attribute^=value]
+11[attribute$=value]
+22[attribute*=value]

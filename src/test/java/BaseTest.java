@@ -10,7 +10,7 @@ public class BaseTest {
 
     public WebDriver driver;
 
-    public String BASE_URL = "https://www.sharelane.com/cgi-bin/register.py";
+    public String BASE_URL = "https://www.saucedemo.com/";
 
 
     @BeforeMethod
