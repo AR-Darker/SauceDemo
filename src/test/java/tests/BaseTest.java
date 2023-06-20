@@ -1,5 +1,6 @@
 package tests;
 
+import pages.CartPage;
 import pages.Inventorypage;
 import pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -15,6 +16,7 @@ public class BaseTest {
     WebDriver driver;
     LoginPage loginPage;
     Inventorypage inventoryPage;
+    CartPage cartPage;
 
     @BeforeMethod
 
@@ -34,5 +36,5 @@ public class BaseTest {
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
 
-        driver.quit();
+//        driver.quit();
     }}
