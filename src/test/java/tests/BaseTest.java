@@ -1,3 +1,7 @@
+package tests;
+
+import pages.Inventorypage;
+import pages.LoginPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,24 +12,27 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 
-    public WebDriver driver;
-
-    public String BASE_URL = "https://www.saucedemo.com/";
-
+    WebDriver driver;
+    LoginPage loginPage;
+    Inventorypage inventoryPage;
 
     @BeforeMethod
-    public void SetUpWindow(){
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+
+    public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+//не забудь иницализировать страницы
+        loginPage = new LoginPage(driver);
+        inventoryPage = new Inventorypage(driver);
+
 
     }
 
     @AfterMethod(alwaysRun = true)
-    public void tearDown(){
+    public void tearDown() {
 
         driver.quit();
-    }
-}
+    }}
