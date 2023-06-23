@@ -61,9 +61,11 @@ public class CartPage extends BasePage {
     public String getBackPackItemPriceFromInventory() {
         return driver.findElement(By.xpath("(//div[@class ='inventory_item_price'])[1]")).getText();
     }
-    public String  getBackPackItemPriceFromCart(){
+
+    public String getBackPackItemPriceFromCart() {
         return driver.findElement(By.xpath("//div[@class ='inventory_item_price']")).getText();
     }
+
     public boolean titleContinueShoppingIsVisible() {
         return driver.findElement(INVENTORYPAGE_CHECKER).isDisplayed();
 

@@ -10,28 +10,31 @@ import static org.testng.Assert.assertTrue;
 import static pages.CartPage.*;
 import static pages.LoginPage.LOGIN_BUTTON;
 
-public class CartTest extends BaseTest{
+public class CartTest extends BaseTest {
     @Test
-    public void CartButtonIsWorking(){
+    public void CartButtonIsWorking() {
         cartPage.loginAndOpenCart();
         cartPage.titleOpenCartIsVisible();
     }
+
     @Test
-    public void CheckOutButtonIsWorking(){
+    public void CheckOutButtonIsWorking() {
         cartPage.loginAndOpenCart();
         driver.findElement(CHECKOUT_BUTTON).click();
         cartPage.titleOpenCheckOutIsVisible();
     }
+
     @Test
 
-    public void ContinueButtonIsWorking(){
+    public void ContinueButtonIsWorking() {
         cartPage.loginAndOpenCart();
         driver.findElement(CONTINUESHOPPING_BUTTON).click();
         cartPage.titleContinueShoppingIsVisible();
 
     }
+
     @Test
-    public void RemoveButtonIsWorking(){
+    public void RemoveButtonIsWorking() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         cartPage.addItemInCartByItemName("Sauce Labs Backpack");
@@ -41,19 +44,19 @@ public class CartTest extends BaseTest{
         cartPage.titleOpenCartIsVisible();
 
     }
+
     @Test
-    public void CheckOutPriceCorrect(){
+    public void CheckOutPriceCorrect() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         cartPage.addItemInCartByItemName("Sauce Labs Backpack");
         String InventoryItemPrice = cartPage.getBackPackItemPriceFromInventory();
         cartPage.openCartButtonClick();
         String CartItemPrice = cartPage.getBackPackItemPriceFromCart();
-        if (InventoryItemPrice.equals(CartItemPrice)){
+        if (InventoryItemPrice.equals(CartItemPrice)) {
             cartPage.titleOpenCartIsVisible();
         }
 
 
-
-
-}}
+    }
+}

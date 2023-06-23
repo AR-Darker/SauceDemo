@@ -23,7 +23,7 @@ public class BaseTest {
 
     @BeforeMethod
 
-    public void setUp(){
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -34,14 +34,11 @@ public class BaseTest {
         cartPage = new CartPage(driver);
 
 
-
-
-
-
     }
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
 
         driver.quit();
-    }}
+    }
+}
