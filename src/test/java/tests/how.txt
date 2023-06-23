@@ -6,3 +6,6 @@
 
 //div[@class = 'cart_item']/div[@class ='cart_item_label']/a/div[text() ='Sauce Labs Backpack']
 а вот тут я остановился и не могу прыгнуть вверх, //form мне не помогает
+
+правильный xpath, если на место бэкбэк, через стринг формат, сделать Имя товара, то локатор работает прекрасно:
+локатор(//div[@class = 'cart_item']/div[@class ='cart_item_label']/a/div[text() ='Sauce Labs Backpack']/parent::a/following-sibling::div[@class = 'item_pricebar']/div[@class ='inventory_item_price'])
