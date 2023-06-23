@@ -1,5 +1,8 @@
 package tests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CartPage;
 import pages.Inventorypage;
 import pages.LoginPage;
@@ -23,12 +26,16 @@ public class BaseTest {
     public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 //не забудь иницализировать страницы
         loginPage = new LoginPage(driver);
         inventoryPage = new Inventorypage(driver);
+        cartPage = new CartPage(driver);
+
+
+
+
 
 
     }
@@ -36,5 +43,5 @@ public class BaseTest {
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
 
-//        driver.quit();
+        driver.quit();
     }}
