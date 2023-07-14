@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Test" parallel="tests" thread-count="2">
+    <test name="chrome start">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="slow" />
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.LoginTest" />
+        </classes>
+    </test> <!-- Test -->
+    <test name="edge start">
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="tests.InventoryTest" />
+        </classes>
+    </test> <!-- Test -->
+</suite>
