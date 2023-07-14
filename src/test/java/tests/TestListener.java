@@ -18,5 +18,7 @@ public class TestListener implements ITestListener {
         ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
         System.out.printf("Test failure: %s \n ",result.getName());
     }
-    //todo make screenshoot
+    //добавить все методы из тест листенера + добавить ретрай в сэйлсфорс
+    //добавть дескриптион в сэйлс форс тесты
+    //шипинги в сэйлфорс + *переход на контакт пэйдж и сделать там как в аккаунт пэйдж*
 }
